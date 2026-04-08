@@ -1,0 +1,18 @@
+menu "EGOS SDK"
+
+    config EGOS_ETHERNET_ENABLED
+        bool "Enable W5500 Ethernet support"
+        default n
+        help
+            Enable W5500 SPI Ethernet as a network option.
+            When enabled, the connection manager tries Ethernet first
+            before falling back to WiFi.
+
+    config EGOS_STATUS_LED_ENABLED
+        bool "Enable RGB status LED"
+        default n
+        help
+            Enable RGB LED status indicator via LEDC PWM.
+            Shows connection state through color patterns.
+
+endmenu
